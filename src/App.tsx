@@ -22,18 +22,22 @@ axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 function App() {
 	return (
 		<Router>
-			<Switch>
-				<Route path="/home">
-					<Layout>
-						<Me />
-					</Layout>
-				</Route>
-				<Route path="/projects">
-					<Layout>
-						<Projects />
-					</Layout>
-				</Route>
-			</Switch>
+			<div>
+				{/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+				<Switch>
+					<Route path="/projects">
+						<Layout>
+							<Projects />
+						</Layout>
+					</Route>
+					<Route path="/">
+						<Layout>
+							<Me />
+						</Layout>
+					</Route>
+				</Switch>
+			</div>
 		</Router>
 	);
 }
@@ -43,7 +47,7 @@ const Layout: React.FC<{ children: ReactChild }> = ({ children }) => {
 		<div className="h-full w-full px-20 py-5">
 			<header>
 				<Link to="/home">
-					<h1 className="font-thin">M4rteaga</h1>
+					<h1 className="">M4rteaga</h1>
 				</Link>
 			</header>
 			<Nav />
