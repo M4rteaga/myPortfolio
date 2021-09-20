@@ -31,11 +31,12 @@ function App() {
 							<Projects />
 						</Layout>
 					</Route>
-					<Route path="/">
+					<Route path="/home">
 						<Layout>
 							<Me />
 						</Layout>
 					</Route>
+					<Redirect path="/" to="/home" />
 				</Switch>
 			</div>
 		</Router>

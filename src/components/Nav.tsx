@@ -17,7 +17,7 @@ const ActiveLink = (props: any) => {
 export const Nav: React.FC = () => {
 	return (
 		<nav className="text-lg flex flex-row justify-center items-center mt-10 space-x-7">
-			<ActiveLink to="/">
+			<ActiveLink to="/home">
 				<span className="hover:font-bold cursor-pointer">Home</span>
 			</ActiveLink>
 			<ActiveLink to="/projects">
