@@ -24,6 +24,8 @@ export const Projects = () => {
 								'Vite',
 								'React',
 								'TypeScript',
+								'Axios',
+								'SWR',
 								'Windicss',
 								'Deta Base',
 								'Deta Micros',
