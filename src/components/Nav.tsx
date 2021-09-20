@@ -7,9 +7,9 @@ const ActiveLink = (props: any) => {
 
 	return (
 		<Link {...props}>
-			<span className={match ? 'font-bold' : ''} href={props.to}>
+			<a className={match ? 'font-bold' : ''} href={props.to}>
 				{props.children}
-			</span>
+			</a>
 		</Link>
 	);
 };
