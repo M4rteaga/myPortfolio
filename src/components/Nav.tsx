@@ -23,7 +23,9 @@ export const Nav: React.FC = () => {
 			<ActiveLink to="/projects">
 				<span className="hover:font-bold cursor-pointer">Projects</span>
 			</ActiveLink>
-			<a className="hover:font-bold cursor-pointer">About</a>
+			<ActiveLink to="/about">
+				<span className="hover:font-bold cursor-pointer">About</span>
+			</ActiveLink>
 		</nav>
 	);
 };

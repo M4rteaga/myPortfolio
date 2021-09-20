@@ -16,7 +16,7 @@ export const Projects = () => {
 					<div className="flex flex-col mt-8 w-full space-y-6">
 						<Project
 							projectTitle="Archive"
-							projectDescription="SaaS web app that will work as a CMS headless."
+							projectDescription="SaaS web app that will work as a headless CMS ."
 							tools={[
 								'Node',
 								'JavaScript',

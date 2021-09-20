@@ -10,6 +10,7 @@ import {
 import { Me } from './pages/Me';
 import { Projects } from './pages/Projects';
 import { Nav } from './components/Nav';
+import { About } from './pages/About';
 
 const me = {
 	name: 'Mateo Arteaga',
@@ -26,6 +27,11 @@ function App() {
 				{/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
 				<Switch>
+					<Route path="/About">
+						<Layout>
+							<About />
+						</Layout>
+					</Route>
 					<Route path="/projects">
 						<Layout>
 							<Projects />
@@ -45,7 +51,7 @@ function App() {
 
 const Layout: React.FC<{ children: ReactChild }> = ({ children }) => {
 	return (
-		<div className="h-full w-full px-20 py-5">
+		<div className="h-full w-full px-20 py-5 pb-15">
 			<header>
 				<Link to="/">
 					<h1 className="">M4rteaga</h1>
