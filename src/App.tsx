@@ -46,7 +46,7 @@ const Layout: React.FC<{ children: ReactChild }> = ({ children }) => {
 	return (
 		<div className="h-full w-full px-20 py-5">
 			<header>
-				<Link to="/home">
+				<Link to="/">
 					<h1 className="">M4rteaga</h1>
 				</Link>
 			</header>
