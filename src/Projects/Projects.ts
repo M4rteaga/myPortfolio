@@ -23,7 +23,7 @@ export const projects = [
 		date: 'Sep 2021',
 		status: 'Development',
 		projectTitle: 'This Portfolio',
-		projectDescription: 'Exacltly this portafolio that you are seeing.',
+		projectDescription: 'Exactly this portafolio that you are seeing.',
 		stack: ['Vite', 'React', 'TypeScript', 'Windicss', 'Mdx'],
 		goToLink: 'https://github.com/M4rteaga/myPortfolio',
 	},
