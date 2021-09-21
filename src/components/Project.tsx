@@ -4,26 +4,41 @@ interface ProjectProps {
 	goToLink: string;
 	projectTitle: string;
 	projectDescription: string;
-	tools: string[];
+	stack: string[];
+	date: string;
+	status: string;
 }
 
 export const Project: React.FC<ProjectProps> = ({
 	goToLink,
 	projectTitle,
 	projectDescription,
-	tools,
+	stack,
+	date,
+	status,
 }) => {
 	return (
 		<div className="flex flex-col ">
-			<a href={goToLink}>
-				<h1 className="font-bold text-2xl align-middle">{projectTitle}</h1>
-			</a>
-			<p className="mt-3 pr-20 text-xl">
+			<div className="flex flex-row space-x-3 items-center">
+				<a href={goToLink}>
+					<h1 className="font-bold text-2xl align-middle">{projectTitle}</h1>
+				</a>
+				<span
+					className={`text-sm ${
+						status == 'Done' ? 'text-green-400' : 'text-red-500'
+					}`}
+				>
+					{status}
+				</span>
+			</div>
+			<span className="text-xs text-gray-400">{date}</span>
+
+			<p className="mt-2 pr-20 text-xl">
 				{projectDescription} Made with{' '}
-				{tools.map((tool, key) => (
+				{stack.map((tool, key) => (
 					<span {...{ key }}>
 						{tool}
-						{key < tools.length - 1 ? ', ' : '.'}
+						{key < stack.length - 1 ? ', ' : '.'}
 					</span>
 				))}
 			</p>

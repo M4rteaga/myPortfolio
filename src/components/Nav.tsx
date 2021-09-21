@@ -3,7 +3,6 @@ import { Link, useRouteMatch } from 'react-router-dom';
 
 const ActiveLink = (props: any) => {
 	const match = useRouteMatch(props.to);
-	console.log(props);
 
 	return (
 		<Link {...props}>

@@ -1,63 +1,42 @@
-import React from 'react';
-import { Nav } from '../components/Nav';
+import React, { useState } from 'react';
 import { Project } from '../components/Project';
+import { projects } from '../Projects/Projects';
+
+type FilterOptions = 'All' | 'Development' | 'Done';
 
 export const Projects = () => {
+	const [filter, setFilter] = useState<'All' | 'Development' | 'Done'>('All');
+	const filterOptions = ['All', 'Development', 'Done'];
+
 	return (
 		<div className="w-full h-full flex flex-col justify-center mt-15 md:px-20 lg:px-48 ">
 			<section className="flex flex-col items-start">
 				<h1 className="text-2xl font-bold md:text-4xl lg:text-5xl">Projects</h1>
 			</section>
-			<div className="flex w-full h-full flex-row mt-12  items-center">
-				<div className="flex flex-col">
-					<h3 className="text-3xl underline underline-red-500 font-bold">
-						In Process
-					</h3>
-					<div className="flex flex-col mt-8 w-full space-y-6">
-						<Project
-							projectTitle="Archive"
-							projectDescription="SaaS web app that will work as a headless CMS ."
-							tools={[
-								'Node',
-								'JavaScript',
-								'Express',
-								'Vite',
-								'React',
-								'TypeScript',
-								'Axios',
-								'SWR',
-								'Windicss',
-								'Deta Base',
-								'Deta Micros',
-							]}
-							goToLink="https://github.com/M4rteaga/react-archive"
-						/>
+			<div className="mt-10 flex flex-row w-full justify-start space-x-6 ">
+				{filterOptions.map((option, key) => (
+					<div
+						className={`${
+							option == filter ? 'bg-light-500' : 'hover:bg-light-300'
+						} rounded-md px-2 py-1 text-center cursor-pointer `}
+						{...{ key }}
+						onClick={() => setFilter(option as FilterOptions)}
+					>
+						<span>{option}</span>
 					</div>
-					<h3 className="text-3xl underline underline-teal-500 font-bold mt-10">
-						Done
-					</h3>
-					<div className="flex flex-col mt-8 w-full space-y-6">
-						<Project
-							projectTitle="Vite Portfolio"
-							projectDescription="Personal portfolio template with landing page."
-							tools={['Vite', 'Vue3', 'Typescript', 'Windicss']}
-							goToLink="https://github.com/M4rteaga/vite-portfolio"
-						/>
-						<Project
-							projectTitle="Viva Air"
-							projectDescription="Client part for a college project in which we create a full-stack web app."
-							tools={[
-								'Next',
-								'React',
-								'JavaScript',
-								'Tailwindcss',
-								'Aws Amplify',
-								'Lambda',
-								'Aws AKS',
-								'Aws RDS',
-							]}
-							goToLink="https://github.com/M4rteaga/viva-air"
-						/>
+				))}
+			</div>
+
+			<div className="flex w-full h-full flex-row  items-center">
+				<div className="flex flex-col">
+					<div className="flex flex-col mt-8 w-full space-y-8">
+						{projects.map((project, key) =>
+							project.status == filter ? (
+								<Project {...{ key }} {...project} />
+							) : (
+								filter == 'All' && <Project {...{ key }} {...project} />
+							)
+						)}
 					</div>
 				</div>
 			</div>
