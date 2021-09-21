@@ -9,8 +9,9 @@ export const Me = () => {
 				</h1>
 				<div className="flex flex-col space-y-3 md:space-y-5  ">
 					<p className="mt-5 lg:text-xl">
-						I'm a software engineer living in Medellin, Colombia. Characterized
-						for being creative, optimistic and with a good sense of humor.
+						I'm a software engineer living in Medellin, Colombia. I am
+						characterized as being creative, optimistic, and with a good sense
+						of humor.
 					</p>
 					<p className="  lg:text-xl">
 						Felt in love with technology and design - investing almost all of my

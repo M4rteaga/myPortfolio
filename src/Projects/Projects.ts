@@ -40,7 +40,7 @@ export const projects = [
 		status: 'Done',
 		projectTitle: 'Viva Air',
 		projectDescription:
-			'Client part for a college project in which we create a full-stack web app.',
+			'Client side for a college project in which we create a full-stack web app.',
 		stack: [
 			'Next',
 			'React',
