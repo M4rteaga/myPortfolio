@@ -1,6 +1,6 @@
 export const projects = [
 	{
-		date: 'Dic 2020',
+		date: 'Aug 2021',
 		status: 'Development',
 		projectTitle: 'Archive',
 		projectDescription: 'SaaS web app that will work as a headless CMS.',
@@ -28,7 +28,7 @@ export const projects = [
 		goToLink: 'https://github.com/M4rteaga/myPortfolio',
 	},
 	{
-		date: 'Dic 20',
+		date: 'Mar 2021',
 		status: 'Done',
 		projectTitle: 'Vite Portfolio',
 		projectDescription: 'Personal portfolio template with landing page.',
@@ -36,7 +36,7 @@ export const projects = [
 		goToLink: 'https://github.com/M4rteaga/vite-portfolio',
 	},
 	{
-		date: 'Dic 20',
+		date: 'Aug 2020',
 		status: 'Done',
 		projectTitle: 'Viva Air',
 		projectDescription:
