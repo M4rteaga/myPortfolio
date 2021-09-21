@@ -33,7 +33,7 @@ export const Project: React.FC<ProjectProps> = ({
 			</div>
 			<span className="text-xs text-gray-400">{date}</span>
 
-			<p className="mt-2 pr-20 text-xl">
+			<p className="mt-2 pr-20 text-normal lg:text-xl">
 				{projectDescription} Made with{' '}
 				{stack.map((tool, key) => (
 					<span {...{ key }}>

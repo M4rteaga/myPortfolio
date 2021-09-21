@@ -9,11 +9,11 @@ export const Projects = () => {
 	const filterOptions = ['All', 'Development', 'Done'];
 
 	return (
-		<div className="w-full h-full flex flex-col justify-center mt-15 md:px-20 lg:px-48 ">
+		<div className="w-full h-full flex flex-col justify-center mt-10 md:mt-15 md:px-15 lg:px-48">
 			<section className="flex flex-col items-start">
 				<h1 className="text-2xl font-bold md:text-4xl lg:text-5xl">Projects</h1>
 			</section>
-			<div className="mt-10 flex flex-row w-full justify-start space-x-6 ">
+			<div className="mt-8 md:mt-10 flex flex-row w-full justify-start space-x-6 ">
 				{filterOptions.map((option, key) => (
 					<div
 						className={`${
@@ -27,7 +27,7 @@ export const Projects = () => {
 				))}
 			</div>
 
-			<div className="flex w-full h-full flex-row  items-center">
+			<div className="flex w-full h-full flex-row  items-center text-lg">
 				<div className="flex flex-col">
 					<div className="flex flex-col mt-8 w-full space-y-8">
 						{projects.map((project, key) =>

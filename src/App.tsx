@@ -51,7 +51,7 @@ function App() {
 
 const Layout: React.FC<{ children: ReactChild }> = ({ children }) => {
 	return (
-		<div className="h-full w-full px-20 py-5 pb-15">
+		<div className="h-full w-full px-10 md:px-20 py-5 pb-15">
 			<header>
 				<Link to="/">
 					<h1 className="">M4rteaga</h1>
