@@ -12,6 +12,7 @@ import { Me } from './pages/Me';
 import { Projects } from './pages/Projects';
 import { Nav } from './components/Nav';
 import { About } from './pages/About';
+import { NoMatch } from './pages/NoMatch';
 
 const me = {
 	name: 'Mateo Arteaga',
@@ -67,18 +68,5 @@ const Layout: React.FC<{ children: ReactChild }> = ({ children }) => {
 		</div>
 	);
 };
-
-function NoMatch() {
-	let location = useLocation();
-	console.log('algo salio mal');
-
-	return (
-		<div>
-			<h3>
-				No match for <code>{location.pathname}</code>
-			</h3>
-		</div>
-	);
-}
 
 export default App;
