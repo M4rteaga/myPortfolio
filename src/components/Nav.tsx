@@ -6,7 +6,7 @@ const ActiveLink = (props: any) => {
 
 	return (
 		<Link {...props}>
-			<a className={match ? 'font-bold' : ''} href={props.to}>
+			<a className={match?.isExact ? 'font-bold' : ''} href={props.to}>
 				{props.children}
 			</a>
 		</Link>
@@ -16,7 +16,7 @@ const ActiveLink = (props: any) => {
 export const Nav: React.FC = () => {
 	return (
 		<nav className="md:text-lg flex flex-row justify-center items-center mt-10 space-x-7">
-			<ActiveLink to="/home">
+			<ActiveLink to="/">
 				<span className="hover:font-bold cursor-pointer">Home</span>
 			</ActiveLink>
 			<ActiveLink to="/projects">

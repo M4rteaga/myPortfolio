@@ -37,12 +37,12 @@ function App() {
 							<Projects />
 						</Layout>
 					</Route>
-					<Route path="/home">
+					<Route path="/">
 						<Layout>
 							<Me />
 						</Layout>
 					</Route>
-					<Redirect path="/" to="/home" />
+					{/* <Redirect path="/" to="/home" /> */}
 				</Switch>
 			</div>
 		</Router>
