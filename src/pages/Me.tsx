@@ -5,7 +5,7 @@ export const Me = () => {
 		<div className="w-full h-full flex flex-col justify-center items-center mt-10 md:mt-15 md:px-15 lg:px-48">
 			<section className="flex flex-col items-start">
 				<h1 className="text-2xl font-bold md:text-4xl lg:text-5xl">
-					Hello,I'm Mateo
+					Hello, I'm Mateo
 				</h1>
 				<div className="flex flex-col space-y-3 md:space-y-5  ">
 					<p className="mt-5 lg:text-xl">
