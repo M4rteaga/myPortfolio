@@ -13,6 +13,7 @@ import { Projects } from './pages/Projects';
 import { Nav } from './components/Nav';
 import { About } from './pages/About';
 import { NoMatch } from './pages/NoMatch';
+import { Helmet } from 'react-helmet';
 
 const me = {
 	name: 'Mateo Arteaga',

@@ -5,11 +5,11 @@ const ActiveLink = (props: any) => {
 	const match = useRouteMatch(props.to);
 
 	return (
-		<Link {...props}>
-			<a className={match?.isExact ? 'font-bold' : ''} href={props.to}>
+		<nav {...props}>
+			<Link className={match?.isExact ? 'font-bold' : ''} to={props.to}>
 				{props.children}
-			</a>
-		</Link>
+			</Link>
+		</nav>
 	);
 };
 

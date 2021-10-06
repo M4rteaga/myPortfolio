@@ -20,7 +20,7 @@ export const Project: React.FC<ProjectProps> = ({
 	return (
 		<div className="flex flex-col ">
 			<div className="flex flex-row space-x-3 items-center">
-				<a href={goToLink}>
+				<a href={goToLink} rel="nofollow">
 					<h1 className="font-bold text-2xl align-middle">{projectTitle}</h1>
 				</a>
 				<span
